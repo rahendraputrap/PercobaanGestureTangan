@@ -5,7 +5,7 @@ import time
 input = cv2.VideoCapture(0)
 
 mpTangan = mp.solutions.hands
-tangan = mpTangan()
+tangan = mpTangan.Hands()
 
 while True:
     ret, img = input.read()
