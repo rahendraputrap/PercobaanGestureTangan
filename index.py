@@ -14,5 +14,9 @@ while True:
     hasil = tangan.process(imgRGB)
     print(hasil.multi_hand_landmarks)
 
+    if hasil.multi_hand_landmarks:
+        for tanganKu in hasil.multi_hand_landmarks:
+            mpDraw.draw_landmarks(img, tanganKu)
+
     cv2.imshow("image", img)
     cv2.waitKey(1)
